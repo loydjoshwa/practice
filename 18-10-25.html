@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        {
+            let arr = [1, 2, 3, 4, 5]
+            for (let i = 0; i < arr.length; i++) {
+                console.log(arr[i])
+            }
+        }
+
+        let student = {
+            name: "john",
+            age: 20,
+            grade: "A"
+        };
+        function counter(names) {
+            let count = 0;
+            for (let prop in names) {
+                count++
+
+            }
+            return count
+        }
+        console.log(counter(student));
+
+        let person = {
+            name: "Alice",
+            city: "Paris",
+            hobby: "Reading"
+
+        }
+       let arr=[];
+        for (let prop in person){
+            arr.push(prop+": "+person[prop])
+
+        }
+        console.log(arr);
+
+        let user={
+            name:"sam",
+            details:{
+                age:25,
+                address:{
+                    city:"Delhi",
+                    pincode:110001
+                }
+            }
+        };
+
+        for (let prop in user.details.address){
+            console.log(prop+": "+user.details.address[prop])}
+           
+        
+
+            let fruits=["Apple","banana","cherry"];
+            for(let fruit of fruits){
+                console.log(fruit)
+            }
+
+            function words(...cont){
+                counter=0;
+                for (let word of cont){
+                    counter+=word.length;
+                    
+                }return counter
+            }
+console.log(words("hello","world","js"));
+
+let numbers=[[1,2],[3,4],[4,5]];
+let out=[]
+for (let num of numbers){
+    for(let char of num){
+        out.push(char);
+    }
+
+
+}
+console.log(out)
+let numberrs = [10, 20, 30, 40, 50];
+numberrs.forEach(element => { console.log(element)
+    
+});
+
+let nums = [2, 3, 4, 5];
+
+// Output → [4, 9, 16, 25]
+
+nums.forEach(element=>console.log(element**2));
+
+let wordss=["apple","banana","apple","banana","apple","orange"]
+let obj={}
+wordss.forEach(function(element){
+    if(obj[element]){
+        obj[element]++;
+    }else{
+        obj[element]=1
+    }
+})
+console.log(obj)
+
+    </script>
+
+</body>
+
+</html>

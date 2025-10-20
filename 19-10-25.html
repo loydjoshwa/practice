@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    const car=new Object();
+    car.brand="toyota"
+    car.model="corolla"
+    car.year=2020
+    car.greet=function(){
+        console.log("my car is "+this.brand+" "+this.model+" ("+this.year+")")
+    }
+
+    car.greet();
+
+
+    function book(title,author){
+        this.title=title
+        this.author=author
+        this.details=function(){
+            console.log(this.title +" by "+ this.author)
+        }
+    }
+
+    let book1=new book("ram","krishna")
+    let book2=new book("neela","jishus")
+
+    console.log(book1.title)
+    console.log(book2.title)
+
+    book1.details()
+    book2.details()
+
+
+
+    
+
+
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">time is live.click here</button>
+    <p id="time"></p>
+    
+    <script>
+        let array=[10,20,30,40,90,78]
+        for(let i=0; i<array.length; i++){
+            if(i===3){
+                 
+                continue;
+               
+
+            }
+            console.log(i)
+        }
+
+        let button=document.getElementById("btn");
+        let time=document.getElementById("time");
+        button.addEventListener("click",function(){
+            time.innerText=Date()
+        })
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let input = [
+        [1,1,0],
+        [1,0,1],
+        [0,0,0]
+];
+
+
+
+function coding(number){
+    let raw1=[];
+    let raw2=[];
+    let raw3=[];
+    let output=[]
+    
+  for(let nums of number){
+        raw3.push(nums[0]);
+        raw1.push(nums[1]);
+        raw2.push(nums[2]);
+    }
+    output.push(raw1,raw2,raw3)
+    return output
+   
+    
+}
+console.log(coding(input))
+    </script>
+    
+</body>
+</html>

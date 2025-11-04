@@ -1,0 +1,16 @@
+.button{
+    background-color:red;
+    color:white;
+    font-size: larger;
+}
+
+.child{
+    width:200px;
+    height:500px;
+    border:2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+   
+}

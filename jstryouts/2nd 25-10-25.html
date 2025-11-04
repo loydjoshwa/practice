@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let input = [
+            [1, 1, 0],
+            [1, 0, 1],
+            [0, 0, 0]
+        ];
+        function codes(name) {
+            let routput = []
+            for (let nam of name) {
+                routput.push(output = []);
+                for (let i = nam.length - 1; i >= 0; i--) {
+                    output.push(nam[i])
+                }
+            }
+            let final = [];
+            routput.forEach(function (rout) {
+                final.push(rock = [])
+                let out = rout.map(function (ro) {
+                    if (ro === 0) {
+                        rock.push(1)
+                    } else {
+                        rock.push(0)
+                    }
+                })
+            })
+            return final
+        }
+        console.log(codes(input))
+
+
+    </script>
+</body>
+
+</html>

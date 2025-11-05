@@ -1,12 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from "./App.jsx"
-import {Help,Butto} from "./App.jsx"
+import Review from "./App"
+import Fetching from "./31.jsx"
+
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-    <Help />
-    <Butto />
-  </StrictMode>,
+  <>
+   <Review />
+   <Fetching />
+  </>
 )

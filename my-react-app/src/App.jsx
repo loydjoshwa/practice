@@ -1,48 +1,61 @@
-import Hello from "./31";
-import "./App.css";
-import React,{useState} from "react";
 
-function App() {
-  return (
-    <div>
-      < Hello />
-    </div>
-  );
-}
+import React,{useState,useEffect,useRef} from "react";
 
-function Help(){
-  return <h1>follow me</h1>
-}
 
-function Butto(){
 
-  const [value,setValue]=useState(0);
+function Review(){
+  const [state,setState]=useState(0);
   const [color,setColor]=useState("white");
+  
+
+  function Inc(){
+    setState((pre)=>pre+1);
+    setColor("green")
+  }
+  function Dec(){
+    setState((pre)=>pre-1)
+    setColor("red")
+  }
+  function reset(hello){
+    setState((pre)=>pre=0)
+     setColor("white")
+     hello
+  }
+
+  // function redd(){
+  //   setColor("red")
+  // }
+  
+  // function yello(){
+  //   setColor("yellow")
+  // }
+  
+  // function blue(){
+  //   setColor("blue")
+  // }
 
   return(
-    <div className="usage">
-      <div className="child" style={{backgroundColor:color}}>
-        <button className="button" onClick={()=>(setValue(value+1))}>
-          increment
-        </button><br/>
-        <label>{value}</label><br/>
-        <button className="button" onClick= {()=>(setValue(value-1))}> 
-          decrement</button><br/>
-          <button className="button" onClick={()=>(setValue(0))}>reset</button>
-          <br/>
-          <button className="button" onClick={()=>(setColor("green"))}>green</button><br/>
-          <button className="button" onClick={()=>(setColor("blue"))}>blue</button><br/>
-          <button className="button" onClick={()=>(setColor("white"))}>rest</button><br/>
-          
-
-
+    <div>
+      <div>
+      <h1 style={{backgroundColor:color}}>{state}</h1>
+      <button onClick={()=>Inc("alice")}>increase</button>
+      <button onClick={Dec}>decrease</button>
+      <button onClick={reset}>reset</button>
       </div>
-
+      {/* <div>
+        <button onChange={redd}>Red</button>
+        <button onClick={yello}>Yellow</button>
+        <button onClick={blue}>Blue</button>
+      </div> */}
     </div>
+    
   )
-  
 }
 
+export default Review
 
-export default App;
-export {Help,Butto};
+
+
+
+
+
